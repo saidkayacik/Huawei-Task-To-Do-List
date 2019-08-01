@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.saidkayacik.todolist.AddItem">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:id="@+id/textBar"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="cancel"
+            android:src="@drawable/cancel"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_alignParentEnd="true"
+            android:text="Save"
+            android:onClick="save"/>
+    </RelativeLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="22dp"
+        android:background="@color/colorPrimary"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:hint="Title"
+        android:textColorHint="#DFDFDF"
+        android:ems="10"
+        android:textStyle="bold"
+        android:id="@+id/title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/clock"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:onClick="setDate"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:id="@+id/date" />
+        <TextView
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:textAlignment="viewEnd"
+            android:layout_height="wrap_content"
+            android:onClick="setTime"
+            android:layout_weight="2"
+            android:ems="10"
+            android:id="@+id/time" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/label"/>
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content" />
+        <!---
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categorie"
+            android:gravity="center_horizontal"
+            android:onClick="setColor"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:id="@+id/categorie" />
+            -->
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="To do..."
+        android:ems="10"
+        android:id="@+id/txt" />
+
+</LinearLayout>
